@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyNation</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Font/GeometriaFont.css">
+</head>
+<body>
+        <div class="preloader">
+  <div class="preloader__row">
+  </div>
+</div>
+<input type="text" value="#" id="myInput">
+    <div id="menu_anim" class="menu">
+        <a href="#" class="menu-elem active">Главная</a>
+        <a href="donate.html" class="menu-elem">Донат</a>
+    </div>
+   <main>
+        <div class="global-container">
+        <div class="info-container">
+        <div id="b1"  class="Name-container">
+           <div  class="text-block">
+               <h1>MyNation</h1>
+               <p>Приватный Minecraft сервер на Java Edition</p>
+               <a class="request" href="#" onclick="alert('Ссылка недоступна');">Подать заявку</a> 
+           </div> 
+           <div class="link-block">
+               <a href="#" id="Discord" onclick="alert('Ссылка недоступна');"><span class="iconify" data-icon="bi:discord" data-inline="false"></span></a>
+           </div>
+        </div>
+        <nav id="b2"  class="info-description"><p>Прежде чем начать игру на сервере, вы должны понимать что он отличается от обычного выживания. На сервере присутствуют строгие ограничения, созданные для баланса игры, соответствующие задумке. За их несоблюдение, вы будете наказаны. </p>
+<p>Главное что нужно знать - сервер полностью ванильный с РП элементами, рассчитанный на реалистичное выживание высокой сложности, с запретом почти на любые автоматические фермы и соблюдением систем. Все системы построены на правилах и взаимодействии игроков. Прежде всего, ознакомьтесь с подробной информацией о сервере и правилами.
+</p>
+
+<p>Для подробной информации, перейдите в канал "ссылки" в дискорд канале или в блоке с документацией</p>
+</nav>
+</div>        <div id="b3"  class="info_table">
+            <h1 id="header">Документация</h1>
+            <div class="list">
+                <a target="_blank" href="https://docs.google.com/document/d/1B7g2wdCCEOuIgfM5PdeEbllwt8_SLj2nlVWDW6Cv5lw/edit?usp=sharing">1.Информация о сервере</a>
+                <a target="_blank" href="https://docs.google.com/document/d/1KaNa9x4E-C0dRp-q7Hu3XzrVm7XD_tixOJA95RMtfgs/edit?usp=sharing">2.Общие правила</a>
+                <a target="_blank" href="https://docs.google.com/document/d/1yl_xmBrIJiOK_iVFL56qm6Lonz5_Fl1DN3WPNmUfF4s/edit?usp=sharing">3.Расценки</a>
+                <a target="_blank" href="https://docs.google.com/document/d/1BTQJEjndqs2d6CEttMhHn_MsiUkLJjV_pDpUmY3liwA/edit?usp=sharing">4.Донат</a>
+            </div>
+  
+        </div>
+        <div id="b4"  class="server-info">
+            <h1 id="header">Настройки сервера</h1>
+            <li>Версия<p>1.18</p></li>
+            <li>Название сервера<p>MyNation</p></li>
+            <li>Вход<p>Лицензия/Пиратка</p></li>
+            <li>Режим<p>Выживание</p></li>
+            <li>Сложность<p>Сложная</p></li>
+            <li>Тип генерации мира<p>Больше биомы</p></li>
+            <li>Размер мира<p>8000x8000</p></li>
+            <li>Слоты<p>10</p></li> 
+            <li>Вайтлист<p>включён</p></li>          
+        </div>
+        </div>
+    </main>
+
+    <script>
+        let time = 200;
+            window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+      window.setTimeout(function() {
+        menu();
+      },time);
+
+      function menu() {
+        document.getElementById('menu_anim').style.opacity = '100%';
+        setTimeout(b1,time);
+      }
+
+      function b1() {
+        document.getElementById('b1').style.opacity = '100%';
+        setTimeout(b2,time);
+      }
+      function b2() {
+        document.getElementById('b2').style.opacity = '100%';
+        setTimeout(b3,time);
+      }
+      function b3() {
+        document.getElementById('b3').style.opacity = '100%';
+        setTimeout(b4,time);
+      }
+      function b4() {
+        document.getElementById('b4').style.opacity = '100%';
+      }      
+    }
+    </script>
+
+   
+</body>
+</html>

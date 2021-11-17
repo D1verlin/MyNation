@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Font/GeometriaFont.css">
+</head>
+<body>
+        <div class="preloader">
+  <div class="preloader__row">
+  </div>
+</div>
+<input type="text" value="#" id="myInput">
+    <div id="menu_anim" class="menu">
+        <a href="index.html" class="menu-elem">Главная</a>
+        <a href="#" class="menu-elem active">Донат</a>
+    </div>
+   <main>
+        <div class="global-container">
+            <div id="b1" class="donate-block">
+                <h2 id="header">Донат</h2>
+        <nav class="min-text">
+        <p>На сервере вы можете приобрести игровую валюты (Вены), пожертвовав некоторую сумму на развитие сервера.</p>
+        <p>Вы должны понимать, что жертвуя любую сумму денег, вы в первую очередь безвозмездно поддерживаете сервер.</p>
+        <p>Выдача валюты и прочего являются бонусом. Сервер в любой момент может закрыться.</p>
+        </nav>  
+        <nav class="cards">
+            <h4>10 вен - 1 ₴ (3 ₽)</h4>
+            <h4>Минимальная сумма: 10₴</h4>
+        </nav>
+        <a class="button" href="https://donatello.to/Harper">Пожертвовать</a>
+            </div>
+
+            <div id="b2" class="area-block">
+          <h2 id="header">Покупка территории</h2>
+        <nav class="min-text">
+        <p>Увеличивать территорию своего участка можно только по рядам (То есть расширить территорию либо на один блок в ширину, либо на один блок в долготу. Высота территории всегда равна меньшей стороне прямоугольника (Так, в территории 7х10, высота вашей территории будет составлять 7 блоков))</p>
+        <p>Например: у вас есть территория 5х5 блоков. Вы можете купить расширение в любом направлении в виде полосы толщиной один блок. Так, купив ряд из 5 блоков, размер территории у вас станет 5х6 блоков. Вы можете продлевать территорию в том же направлении, делая её прямоугольной формы, до тех пор пока отношение сторон не будет превышать 1:3.
+</p>
+        </nav>  
+        <nav class="cards">
+            <h4>Цена одного блока (не ряда) (в любом направлении): 10 Вен</h4>
+        </nav>
+            </div>
+
+
+
+        </div>
+<div class="secondry-container">
+<div id="b3" class="calc-block">
+<h2 id="header">Покупка территории</h2>
+<div class="min-container">
+    <nav class="inputers">
+        <h3>Изначальная территория</h3>
+        <nav class="min-b">
+        <div>
+        <h4>x</h4>
+        <input type="number" class="area_input" id="your_x" name="your_x" value="5">
+        </div>
+        <div>
+        <h4>y</h4>
+        <input type="number" class="area_input" id="your_z" name="your_z" value="5">
+        </div>
+        </nav>
+        <h3>Желаемая территория</h3>
+        <nav class="min-b">
+        <div>
+        <h4>x</h4>
+        <input type="number" class="area_input" id="needed_x" name="needed_x" value="5">
+        </div>
+        <div>
+        <h4>y</h4>
+        <input type="number" class="area_input" id="needed_z" name="needed_z" value="5">
+        </div>
+        </nav>        
+    </nav>
+    <div class="line"></div>
+    <nav class="result">
+        <nav class="min-r">
+        <div class="min-r">
+        <h3>Стоимось</h3>
+        <nav class="min-b">
+        <div class="price_card" id="ven"></div>
+        <p>или</p>
+        <div class="price_card" id="hryvni"></div>
+        </nav>
+        </div>
+        <div class="min-r">
+        <h3>Соотношение</h3>        
+        <div class="price_card" id="ST"></div>
+        </div>
+        </nav>
+        <nav class="button_zone">
+        <button onclick="Starter()" class="start">Расчитать</button>
+        </nav>
+    </nav>
+    
+</div>
+
+
+</div> 
+</div>       
+    </main>
+    <script src="calc.js"></script>
+     <script>
+        let time = 200;
+            window.onload = function () {
+        /* calc.js */
+        delete localStorage.your_x;
+        delete localStorage.your_z;
+        delete localStorage.needed_x;
+        delete localStorage.needed_z;
+        localStorage.setItem('your_x', your_x.value);
+        localStorage.setItem('your_z', your_z.value);
+        localStorage.setItem('needed_x', needed_x.value);
+        localStorage.setItem('needed_z', needed_z.value);
+        Starter();
+        /* calc.js */
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+      window.setTimeout(function() {
+        menu();
+      },time);
+
+      function menu() {
+        document.getElementById('menu_anim').style.opacity = '100%';
+        setTimeout(b1,time);
+      }
+
+      function b1() {
+        document.getElementById('b1').style.opacity = '100%';
+        setTimeout(b2,time);
+      }
+      function b2() {
+        document.getElementById('b2').style.opacity = '100%';
+        setTimeout(b3,time);
+      }
+      function b3() {
+        document.getElementById('b3').style.opacity = '100%';
+      }     
+    }
+    </script>
+</body>
+</html>
