@@ -762,4 +762,8 @@ main {
         height: 1px;
     }
 
+    .menu {
+        justify-content: space-between;
+    }
+
 }
