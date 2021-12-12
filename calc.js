@@ -47,23 +47,6 @@ needed_z.oninput = function() {
 
 
 
-/* 
-
-Formula
-
-X - current value by X
-Z - current value by Z
-X2 - needed value by X
-Z2 - needed value by Z
-hryvni - another value
-ven - another value 2
-
-hryvni = X2*Z2-(X*Z)
-
-ven = ₴ * 5 (По курсу)
-
-*/
-
 
 function Starter() {
 let your_x = parseInt(localStorage.your_x || 0);
@@ -74,8 +57,8 @@ let needed_z = parseInt(localStorage.needed_z || 0);
 let gcd = Math.gcd(needed_x, needed_z);
 let numerator = needed_x / gcd;
 let denominator = needed_z / gcd;
-let hryvni = needed_x * needed_z - (your_x * your_z);
-let ven = hryvni * 5;
+let ven = (needed_x * needed_z - (your_x * your_z)) * 5;
+let hryvni = ven / 10;
 
 document.querySelector('#ven').innerHTML = ven + ' вен';
 document.querySelector('#hryvni').innerHTML = hryvni + ' ₴';
