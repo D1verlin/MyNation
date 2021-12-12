@@ -60,7 +60,7 @@ ven - another value 2
 
 hryvni = X2*Z2-(X*Z)
 
-ven = ₴ * 10 (По курсу)
+ven = ₴ * 5 (По курсу)
 
 */
 
@@ -75,7 +75,7 @@ let gcd = Math.gcd(needed_x, needed_z);
 let numerator = needed_x / gcd;
 let denominator = needed_z / gcd;
 let hryvni = needed_x * needed_z - (your_x * your_z);
-let ven = hryvni * 10;
+let ven = hryvni * 5;
 
 document.querySelector('#ven').innerHTML = ven + ' вен';
 document.querySelector('#hryvni').innerHTML = hryvni + ' ₴';
